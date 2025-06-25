@@ -1,0 +1,15 @@
+.gallery-card {
+  perspective: 1000px;
+  transition: transform 0.5s;
+}
+
+.gallery-card img {
+  border-radius: 16px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.gallery-card:hover img {
+  transform: rotateY(10deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}

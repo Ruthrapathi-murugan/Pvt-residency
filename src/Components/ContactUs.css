@@ -1,0 +1,42 @@
+.contact-section {
+  background: linear-gradient(to right, #f9f9f9, #eef1f7);
+  min-height: 100vh;
+}
+
+.heading-glow {
+  color: #0d6efd;
+  text-shadow: 0 0 5px rgba(13, 110, 253, 0.6), 0 0 15px rgba(13, 110, 253, 0.3);
+}
+
+.contact-card {
+  background: white;
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  border-radius: 10px;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
