@@ -19,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="*" element={<h1>Not Found Please type the correct url</h1>} />
       </Routes>
       <Footer />
     </Router>
