@@ -26,19 +26,20 @@ const Hero = () => {
 
   return (
     <div>
-      <div
-        className="hero-slider"
-        style={{
-          backgroundImage: `url(${slides[currentSlide].image})`,
-        }}
-      >
-        <div className="overlay">
-          <h1 className="animated-text" key={currentSlide}>
-  {slides[currentSlide].text}
-</h1>
+      <div className="hero-slider">
+  <div
+    className="hero-slide-bg"
+    style={{
+      backgroundImage: `url(${slides[currentSlide].image})`,
+    }}
+  ></div>
 
-        </div>
-      </div>
+  <div className="overlay">
+    <h1 className="animated-text" key={currentSlide}>
+      {slides[currentSlide].text}
+    </h1>
+  </div>
+</div>
 
       {/* About Section Below Hero */}
       <div className="hero-description-section bg-white py-5 px-3">
