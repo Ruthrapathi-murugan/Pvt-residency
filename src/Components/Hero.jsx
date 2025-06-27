@@ -3,24 +3,15 @@ import './Hero.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
+
 const slides = [
-  {
-    image: './slide1.jpg',
-    text: 'Welcome to Pvt Residency, Palani',
-  },
-  {
-    image: '/slide2.jpg',
-    text: 'Stay Beyond Expectations',
-  },
-  {
-    image: '/slide3.jpg',
-    text: 'Your Comfort, Our Priority',
-  },
-  {
-    image: '/slide4.jpg',
-    text: 'Feel at Home in Every Stay',
-  },
+  { image: '/slide1.jpg', text: 'Welcome to Pvt Residency, Palani' },
+  { image: '/slide2.jpg', text: 'Stay Beyond Expectations' },
+  { image: '/slide3.jpg', text: 'Your Comfort, Our Priority' },
+  { image: '/slide4.jpg', text: 'Feel at Home in Every Stay' },
 ];
+
+
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

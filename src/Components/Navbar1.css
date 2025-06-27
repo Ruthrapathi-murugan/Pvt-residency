@@ -1,13 +1,18 @@
+/* Navbar base styles */
 .navbar-section {
   background: linear-gradient(to right, #ffffff, #f0f4ff);
   transition: all 0.4s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-
+  padding: 0.5rem 1rem;
 }
 
 .logo-img {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
 }
 
 .hotelname {
@@ -16,8 +21,10 @@
   color: #1f3c88;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   animation: fadeSlideIn 1.2s ease forwards;
+  white-space: nowrap;
 }
 
+/* Responsive nav link styles */
 .nav-links .nav-link {
   font-size: 1.1rem;
   margin: 0 10px;
@@ -26,16 +33,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-toggler {
-    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-    font-size: var(--bs-navbar-toggler-font-size);
-    line-height: 1;
-    color: var(--bs-navbar-color);
-    background-color: #5a4bb3c4;
-    border: var(--bs-border-width) solid rgb(65 18 18 / 81%);
-    border-radius: var(--bs-navbar-toggler-border-radius);
-    transition: var(--bs-navbar-toggler-transition);
-}
 .nav-links .nav-link::after {
   content: '';
   height: 3px;
@@ -67,6 +64,13 @@
   transform: translateY(-2px);
 }
 
+/* Toggler custom style */
+.navbar-toggler {
+  background-color: #5a4bb3c4;
+  border: 1px solid rgba(65, 18, 18, 0.81);
+  border-radius: 6px;
+}
+
 /* Animation */
 @keyframes fadeSlideIn {
   from {
@@ -76,5 +80,49 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .hotelname {
+    font-size: 1.2rem;
+  }
+
+  .navbar-section {
+    padding: 0.5rem;
+  }
+
+  .book-now-btn {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+
+  .navbar-brand {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    display: block; /* Hide logo on very small screens */
+     height: 20px;
+    width: 20px;
+
+  }
+
+  .hotelname {
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  .nav-links .nav-link {
+    font-size: 1rem;
+    margin: 0.5rem 0;
   }
 }

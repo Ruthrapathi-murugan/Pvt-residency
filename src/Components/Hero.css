@@ -3,6 +3,8 @@
   width: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat; /* prevent multiple images */
+  background-attachment: fixed; /* optional: gives a smooth parallax feel */
   position: relative;
   animation: backgroundZoom 10s ease-in-out infinite alternate;
 }
@@ -12,7 +14,7 @@
     background-size: 100%;
   }
   100% {
-    background-size: 110%;
+    background-size: 105%; /* Slight zoom for safe responsiveness */
   }
 }
 
@@ -49,5 +51,16 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    background-size: cover !important;
+    animation: none; /* remove zoom on small devices if needed */
+  }
+
+  .animated-text {
+    font-size: 2rem;
   }
 }
