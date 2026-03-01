@@ -3,17 +3,21 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './Gallery.css';
 
 const images = [
-  { src: '/slide1.jpg', alt: 'Deluxe Room View' },
-  { src: '/slide2.jpg', alt: 'Modern Interiors' },
+  { src: '/slide1.jpg', alt: 'Premium Deluxe Header' },
+  { src: '/slide2.jpg', alt: 'Modern Room Interiors' },
   { src: '/slide3.jpg', alt: 'Cozy Atmosphere' },
   { src: '/slide4.jpg', alt: 'Premium Bedding' },
-  { src: '/slide4.jpg', alt: 'Spacious Suite' },
-  { src: '/slide4.jpg', alt: 'Luxury Accommodation' },
-  { src: '/staircase.JPG', alt: 'Elegant Staircase' },
-  { src: '/underground.JPG', alt: 'Underground Level' },
-  { src: '/Parking.JPG', alt: 'Secure Parking Area' },
-  { src: '/Frontview.JPG', alt: 'Hotel Exterior View' },
+  { src: '/2bed.jpg', alt: 'Classic Standard Room View' },
+  { src: '/2bed2.jpg', alt: 'Classic Standard Room Comfort' },
+  { src: '/2bed3.jpg', alt: 'Classic Standard Room Layout' },
+  { src: '/3bed.jpg', alt: 'Luxury Family Suite' },
+  { src: '/3bed2.jpg', alt: 'Luxury Family Suite Layout' },
+  { src: '/3bed3.jpg', alt: 'Luxury Family Suite Comfort' },
+  { src: '/bath.jpeg', alt: 'Modern Clean Bathroom' },
   { src: '/Corridor.JPG', alt: 'Quiet Corridors' },
+  { src: '/staircase.JPG', alt: 'Elegant Staircase' },
+  { src: '/Frontview.JPG', alt: 'Hotel Exterior View' },
+  { src: '/Parking.JPG', alt: 'Secure Parking Area' },
 ];
 
 const Gallery = () => {
