@@ -1,0 +1,90 @@
+.book-now-modal .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.book-now-modal .modal-header {
+    border-bottom: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+}
+
+.book-now-modal .modal-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.booking-card {
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--accent-color);
+    overflow: hidden;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--hover-color);
+}
+
+.logo-container {
+    height: 60px;
+    width: 100%;
+}
+
+.platform-logo {
+    max-height: 100%;
+    max-width: 80%;
+    object-fit: contain;
+    transition: transform var(--transition-fast);
+}
+
+.booking-card:hover .platform-logo {
+    transform: scale(1.05);
+}
+
+.vendor-name {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+}
+
+.book-btn-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-fast);
+}
+
+.booking-card:hover .book-btn-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.direct-call-card {
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(26, 54, 93, 0.05) 100%);
+    border: 1px dashed var(--primary-color);
+}
+
+.pulse-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(26, 54, 93, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(26, 54, 93, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(26, 54, 93, 0);
+    }
+}

@@ -1,63 +1,76 @@
-.section-title {
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeSlideDown 1s ease forwards;
+/* Existing logic mapped to new premium classes */
+
+.room-section {
+  position: relative;
 }
 
-.animated-room-section {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.room-card-wrapper {
+  transition: all var(--transition-normal);
+  border: 1px solid transparent;
 }
 
-.animated-room-section:hover {
-  transform: scale(1.01);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.room-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl) !important;
+  border-color: var(--accent-color);
 }
 
-.hover-zoom {
-  transition: transform 0.4s ease;
-  border-radius: 10px;
+/* Strict Image Sizing for Carousel to Prevent Layout Shifts */
+.room-carousel {
+  width: 100%;
+  background-color: var(--light);
 }
 
-.hover-zoom:hover {
+/* By forcing the height on carousel-inner, we prevent all layout jumping */
+.room-carousel .carousel-inner {
+  height: 450px !important;
+}
+
+.room-carousel .carousel-item {
+  height: 100% !important;
+}
+
+.room-carousel .carousel-item img {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.transition-transform {
+  transition: transform var(--transition-slow);
+}
+
+.room-card-wrapper:hover .transition-transform {
   transform: scale(1.05);
 }
 
-.animate-fade-in {
-  animation: fadeInUp 1s ease-in-out both;
+.amenity-item {
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
 }
 
-.book-btn {
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-  transition: background-color 0.3s ease, transform 0.2s;
+.transition-hover:hover {
+  transform: translateY(-5px);
+  background-color: var(--white) !important;
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-sm);
 }
 
-.book-btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+.transition-hover:hover i {
+  color: var(--primary-color) !important;
+  transform: scale(1.1);
+  transition: transform var(--transition-fast);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 991px) {
+  .room-carousel .carousel-inner {
+    height: 350px !important;
   }
 }
 
-@keyframes fadeSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 768px) {
+  .room-carousel .carousel-inner {
+    height: 250px !important;
   }
 }

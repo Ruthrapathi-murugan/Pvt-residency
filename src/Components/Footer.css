@@ -1,52 +1,127 @@
+/* Premium Dark Footer Styles */
+
 .footer-section {
-  background: linear-gradient(145deg, #ffffff, #ffffff);
-  color: #000000;
-  box-shadow: 0 -5px 15px rgb(0, 0, 0);
+  background-color: #0b1120;
+  /* Deep navy/almost black matching the primary vibe */
+  color: #e2e8f0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 0 !important;
 }
 
 .footer-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #041747;
-  text-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
 }
 
-.footer-subtitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #041747;
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
-.footer-link {
-  color: #080808;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 8px;
-  transition: all 0.3s ease-in-out;
+.border-accent {
+  border-color: var(--accent-color) !important;
 }
 
-.footer-link:hover {
-  color: #ffc107;
-  transform: translateX(5px);
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.btn-outline-accent {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transition: all var(--transition-fast);
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 .footer-text {
-  color: #030303;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
-hr {
-  border-color: #444;
+/* Links */
+.footer-links li {
+  margin-bottom: 0.75rem;
 }
 
-img.shadow {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
 }
 
-.footer-section {
-    background: linear-gradient(159deg, #000000c2, #ffffff);
-    color: #000000;
-    box-shadow: 0 -5px 15px rgb(0, 0, 0);
+.footer-links a:hover {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+/* Social Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Contact Hover */
+.phone-hover,
+.email-hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+  transition: color var(--transition-fast);
+}
+
+.phone-hover:hover,
+.email-hover:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Custom Credit Link */
+.custom-credit-link {
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+  display: inline-block;
+}
+
+.custom-credit-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.custom-credit-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

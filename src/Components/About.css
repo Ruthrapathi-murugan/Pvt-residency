@@ -1,91 +1,52 @@
-.about-section {
-  background: linear-gradient(135deg, #f4f4f4, #e8f0ff);
-  padding: 60px 0;
+/* Modernized About Section Styles */
+
+.about-image-wrapper {
+  transition: transform var(--transition-slow);
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #1f3c88;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeInDown 1s ease-in-out;
+.about-image-wrapper:hover {
+  transform: translateY(-10px);
 }
 
-.circle-image img {
-  border: 6px solid white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s;
+.bg-decoration-circle {
+  transition: transform var(--transition-slow);
 }
 
-.circle-image img:hover {
+.about-image-wrapper:hover .bg-decoration-circle {
   transform: scale(1.05);
 }
 
-.hanger-img {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  transition: transform 0.4s;
-}
-
-.hanger-img:hover {
-  transform: scale(1.03);
+.leading-relaxed {
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .amenity-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all var(--transition-normal);
+  border: 1px solid transparent !important;
 }
 
 .amenity-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--accent-color) !important;
 }
 
-.amenity-card .icon {
-  font-size: 2.5rem;
-  color: #1f3c88;
-  margin-bottom: 10px;
+.transition-icon {
+  transition: transform var(--transition-fast);
 }
 
-.amenity-card .title {
-  font-weight: 600;
-  font-size: 1.1rem;
+.amenity-card:hover .transition-icon {
+  transform: scale(1.15);
 }
 
-
-
-.temple-timings-section {
-  background: #f9f9f9;
-  padding: 2rem 1rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+.custom-timing-list .list-group-item {
+  border-color: var(--accent-color);
+  transition: background-color var(--transition-fast);
 }
 
-.temple-timings-section h2 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #000032;
+.custom-timing-list .list-group-item:hover {
+  background-color: var(--bg-color);
 }
 
-.temple-timings-section .list-group-item {
-  background: white;
-  font-weight: 500;
-  font-size: 1rem;
-  border: none;
-  border-bottom: 1px solid #eee;
-}
-
-/* Simple fade-in animation */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Animations included globally in index.css, just applying classes now */

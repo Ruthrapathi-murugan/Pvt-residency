@@ -1,42 +1,48 @@
+/* Modern Contact Us Styles */
+
 .contact-section {
-  background: linear-gradient(to right, #f9f9f9, #eef1f7);
-  min-height: 100vh;
+  position: relative;
 }
 
-.heading-glow {
-  color: #0d6efd;
-  text-shadow: 0 0 5px rgba(13, 110, 253, 0.6), 0 0 15px rgba(13, 110, 253, 0.3);
+.info-card {
+  transition: transform var(--transition-normal);
 }
 
-.contact-card {
-  background: white;
-  transition: transform 0.3s ease;
-  border-radius: 16px;
-}
-
-.contact-card:hover {
+.info-card:hover {
   transform: translateY(-5px);
 }
 
-.contact-form input,
-.contact-form textarea {
-  border: 1px solid #ced4da;
-  border-radius: 10px;
+.phone-link,
+.email-link {
+  transition: color var(--transition-fast);
+}
+
+.phone-link:hover,
+.email-link:hover {
+  color: var(--white) !important;
+  text-decoration: underline !important;
+}
+
+.form-card {
+  transition: transform var(--transition-normal);
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+}
+
+.custom-input {
+  border: 1px solid var(--accent-color);
+  background-color: var(--bg-color);
+  transition: all var(--transition-fast);
+}
+
+.custom-input:focus {
+  background-color: var(--white);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
 }
 
 .map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-  border-radius: 10px;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border-radius: 10px;
+  min-height: 250px;
 }
