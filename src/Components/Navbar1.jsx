@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button, Alert } from 'react-bootstrap';
 import BookNowModal from './BookNowModal';
 import './Navbar1.css';
 
 const Navbar1 = () => {
   const [showModal, setShowModal] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
 
   const handleShow = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
@@ -21,6 +22,24 @@ const Navbar1 = () => {
 
   return (
     <>
+      {showBanner && (
+        <Alert
+          variant="dark"
+          onClose={() => setShowBanner(false)}
+          dismissible
+          className="m-0 border-0 rounded-0 text-center py-2 px-4 shadow-sm top-promo-banner d-flex justify-content-center align-items-center"
+          style={{ backgroundColor: 'var(--primary-color)', color: 'var(--white)' }}
+        >
+          <div className="w-100 fw-semibold" style={{ fontSize: '0.9rem', letterSpacing: '0.5px' }}>
+            <span className="me-2"><i className="bi bi-stars text-warning"></i></span>
+            Book directly and get an exclusive <span className="text-dark bg-warning px-2 py-1 rounded-pill fw-bold fs-6 mx-1 shadow-sm blink-text">10% discount</span> on your stay!
+            <Button variant="link" onClick={handleShow} className="text-white text-decoration-underline ms-2 p-0 fw-bold pb-1 shadow-none pulse-btn d-inline-block">
+              Claim Offer
+            </Button>
+          </div>
+        </Alert>
+      )}
+
       <Navbar
         bg="white"
         variant="light"
