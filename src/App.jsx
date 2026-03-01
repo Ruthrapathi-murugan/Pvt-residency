@@ -8,6 +8,7 @@ import Rooms from './Components/Rooms';
 import About from './Components/About';
 import ContactUs from './Components/ContactUs';
 import Gallery from './Components/Gallery';
+import WhatsAppButton from './Components/WhatsAppButton';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="*" element={<h1>Not Found Please type the correct url</h1>} />
       </Routes>
+      <WhatsAppButton />
       <Footer />
     </Router>
   );
