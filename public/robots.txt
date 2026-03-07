@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pvtresidency.netlify.app/sitemap.xml
+Sitemap: https://www.pvtresidency.com/sitemap.xml
